@@ -1,5 +1,4 @@
-export(geom_rangeframe)
-export(geom_tufteboxplot)
+export(geom_taco)
 import(colorspace)
 import(ggplot2)
 import(grid)

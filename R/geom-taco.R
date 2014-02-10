@@ -4,7 +4,7 @@ na.rm = FALSE, ...) {
   na.rm = na.rm, ...)
 }
       
-GeomTaco <- proto(Geom, {
+GeomTaco <- proto(ggplot2:::Geom, {
   objname <- "taco"
 
   draw_groups <- function(., ...) .$draw(...)
