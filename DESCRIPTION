@@ -1,8 +1,13 @@
-Package: ggthemes
-Version: 1.6.1
-Date: 2013-12-28
-Title: Extra themes, scales and geoms for ggplot
-Authors@R: c(person("Jeffrey B.", "Arnold", role = c("aut", "cre"),
+Package: geom_taco
+Version: 3.2.8
+Date: 2014-02-10
+Title: A taco geom for ggplot
+Authors@R: c(
+  person("Thomas", "Levine",
+    role = c("aut", "cre"),
+    email = "_@thomaslevine.com"),
+  person("Jeffrey B.", "Arnold",
+    role = c("aut", "cre"),
     email = "jeffrey.arnold@gmail.com"))
 Depends:
     R (>= 2.14),
@@ -18,5 +23,5 @@ Suggests:
     extrafont
 Description: Some extra themes, geoms, and scales for ggplot2.
 License: GPL-2
-URL: http://github.com/jrnold/ggthemes
-BugReports: http://github.com/jrnold/ggthemes
+URL: http://github.com/csv/geom_taco
+BugReports: http://github.com/csv/geom_taco
