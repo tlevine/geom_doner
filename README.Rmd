@@ -7,18 +7,9 @@ ggplot(iris) + aes(meat = Species, salsa = Sepal.Length) + geom_taco()
   
 # Install 
 
-To install the stable version from CRAN,
-
-```r
-install.packages('ggthemes', dependencies = TRUE)
-```
-
-Or, to install the development version from github, use the
-**devtools** package,
-
 ```r
 library("devtools")
-install_github("ggthemes", "jrnold")
+install_github("geomtaco", "csv")
 ```
 
 Windows users also must first install

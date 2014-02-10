@@ -1,4 +1,4 @@
-exports <- function (mapping = NULL, data = NULL, stat = "identity", position = "identity",
+geom_taco <- function (mapping = NULL, data = NULL, stat = "identity", position = "identity",
 na.rm = FALSE, ...) {
   GeomTaco$new(mapping = mapping, data = data, stat = stat, position = position, 
   na.rm = na.rm, ...)
