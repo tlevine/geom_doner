@@ -17,14 +17,22 @@ GeomTaco <- proto(ggplot2:::Geom, {
       levels(data[,col]) <- c(col, paste('no', col))
     }
     data$salsa <- cut(data$salsa, 3)
-    levels(data$salsa) <- c('Mild', 'Medium', 'Mild')
+    levels(data$salsa) <- c('mild', 'medium', 'mild')
+
+    data$fill <- factor(data$fill)
+    levels(data$fill) <- c(
+      'carne asada', 'pastor', 'carnitas',
+      'pescado', 'chorizo', 'cabeza',
+      'lengua', 'molida', 'chileverde',
+      'pollo', 'chicaron', 'tripas'
+    )
 
     attach(data)
     recipe <- paste0(
       '\n',
       'One taco for "', label, '" with:\n* ',
       paste(sep = '\n* ',
-        data$fill,
+        fill,
         paste(salsa, 'salsa'),
         lime,
         radish,

@@ -1,8 +1,10 @@
 # Example
 
 ```{r dsamp}
-library('geom_taco')
-ggplot(iris) + aes(meat = Species, salsa = Sepal.Length) + geom_taco()
+library(geomtaco)
+ggplot(mpg) +
+  aes(label = paste(manufacturer, model), fill = trans, cilantro = TRUE, x = hwy, y = cty) +
+  geom_text() + geom_taco()
 ```
   
 # Install 
