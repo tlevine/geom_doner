@@ -14,17 +14,17 @@ GeomTaco <- proto(ggplot2:::Geom, {
     if (empty(data)) return(zeroGrob())
     for (col in c('lime','radish','guacamole','cilantro')) {
       data[,col] <- factor(data[,col], levels = c(TRUE, FALSE))
-      levels(data[,col]) <- c(col, paste('No', col))
+      levels(data[,col]) <- c(col, paste('no', col))
     }
     data$salsa <- cut(data$salsa, 3)
-    levels(data$salsa) <- c('Mild', 'Medium', 'Mild)
+    levels(data$salsa) <- c('Mild', 'Medium', 'Mild')
 
     attach(data)
     recipe <- paste0(
       '\n',
-      'One taco for "', label, '" with:\n',
-      paste(sep = '\n',
-        fill,
+      'One taco for "', label, '" with:\n* ',
+      paste(sep = '\n* ',
+        data$fill,
         paste(salsa, 'salsa'),
         lime,
         radish,
@@ -44,6 +44,6 @@ GeomTaco <- proto(ggplot2:::Geom, {
   required_aes <- c()
   default_aes <- function(.) aes(
     fill = 'carne asada', label = Sys.info()[["user"]],
-    salsa = FALSE, lime = FALSE, radish = FALSE,
+    salsa = 1, lime = FALSE, radish = FALSE,
     guacamole = FALSE, cilantro = FALSE)
 })
