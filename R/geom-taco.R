@@ -12,16 +12,35 @@ GeomTaco <- proto(ggplot2:::Geom, {
     data <- remove_missing(data, na.rm, 
       c("label","fill","salsa","lime","radish","guacamole","cilantro"), name = "geom_taco")
     if (empty(data)) return(zeroGrob())
-    print(data)   
+    for (col in c('salsa','lime','radish','guacamole','cilantro')) {
+      data[,col] <- factor(data[,col], levels = c(TRUE, FALSE))
+      levels(data[,col]) <- c(col, paste('No', col))
+    }
+    attach(data)
+    recipe <- paste0(
+      '\n',
+      'One taco for "', label, '" with:\n',
+      paste(sep = '\n',
+        fill,
+        salsa,
+        lime,
+        radish,
+        guacamole,
+        cilantro
+      ),
+      '\n'
+    )
+    cat(recipe)
   }
 
   draw_legend <- function(., data, ...) {
     data <- aesdefaults(data, .$default_aes(), list(...))
-    print(data)   
   }
 
   default_stat <- function(.) StatIdentity
-  required_aes <- c("label")
-  default_aes <- function(.) aes(fill = 'carne asada',
-    salsa = FALSE, lime = FALSE, radish = FALSE, guacamole = FALSE, cilantro = FALSE)
+  required_aes <- c()
+  default_aes <- function(.) aes(
+    fill = 'carne asada', label = Sys.info()[["user"]],
+    salsa = FALSE, lime = FALSE, radish = FALSE,
+    guacamole = FALSE, cilantro = FALSE)
 })
