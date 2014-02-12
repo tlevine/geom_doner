@@ -12,17 +12,20 @@ GeomTaco <- proto(ggplot2:::Geom, {
     data <- remove_missing(data, na.rm, 
       c("label","fill","salsa","lime","radish","guacamole","cilantro"), name = "geom_taco")
     if (empty(data)) return(zeroGrob())
-    for (col in c('salsa','lime','radish','guacamole','cilantro')) {
+    for (col in c('lime','radish','guacamole','cilantro')) {
       data[,col] <- factor(data[,col], levels = c(TRUE, FALSE))
       levels(data[,col]) <- c(col, paste('No', col))
     }
+    data$salsa <- cut(data$salsa, 3)
+    levels(data$salsa) <- c('Mild', 'Medium', 'Mild)
+
     attach(data)
     recipe <- paste0(
       '\n',
       'One taco for "', label, '" with:\n',
       paste(sep = '\n',
         fill,
-        salsa,
+        paste(salsa, 'salsa'),
         lime,
         radish,
         guacamole,
