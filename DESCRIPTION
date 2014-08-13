@@ -14,6 +14,7 @@ Imports:
     grid,
     proto,
     scales,
+    ggthemes
 Suggests:
     plyr,
     reshape2,

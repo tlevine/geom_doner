@@ -17,9 +17,11 @@ mpg$truck <- mpg$class
 levels(mpg$truck) <- c(TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE)
 
 mpg$y2008 <- mpg$year == 2008 # Alternative is 1999
+mpg$id <- row.names(mpg)
 
-ggplot(mpg) +
-  aes(label = paste(manufacturer, model),
+set.seed(693)
+ggplot(mpg[sample.int(nrow(mpg), 8),]) +
+  aes(label = paste0('Make #', id, ' (', manufacturer, ' ', model, ')'),
       border = drv,
       knoblauch = truck,
       scharf = grepl('auto', trans),
