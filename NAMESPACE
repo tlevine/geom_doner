@@ -1,4 +1,4 @@
-export(geom_taco)
+export(geom_doner)
 import(colorspace)
 import(ggplot2)
 import(grid)
