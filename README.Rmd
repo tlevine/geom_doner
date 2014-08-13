@@ -10,9 +10,21 @@ Windows users also must first install
  
 # Example
 
-```{r dsamp}
+```{r mpg}
 library(geomdoner)
+
+mpg$truck <- mpg$class
+levels(mpg$truck) <- c(TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE)
+
+mpg$y2008 <- mpg$year == 2008 # Alternative is 1999
+
 ggplot(mpg) +
-  aes(label = paste(manufacturer, model), fill = trans, cilantro = TRUE, x = hwy, y = cty) +
-  geom_text() + geom_taco()
+  aes(label = paste(manufacturer, model),
+      border = drv,
+      knoblauch = truck,
+      scharf = grepl('auto', trans),
+      zwiebeln = y2008,
+      tomaten = TRUE, salat = TRUE,
+      x = hwy, y = cty) +
+  geom_text() + geom_döner()
 ```
