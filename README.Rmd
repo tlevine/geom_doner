@@ -28,5 +28,7 @@ ggplot(mpg[sample.int(nrow(mpg), 8),]) +
       zwiebeln = y2008,
       tomaten = TRUE, salat = TRUE,
       x = hwy, y = cty) +
+  xlab('Highway miles per gallon') +
+  ylab('City miles per gallon') +
   geom_text() + geom_döner()
 ```
