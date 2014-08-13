@@ -2,7 +2,7 @@
 
 ```r
 library("devtools")
-install_github("geomtaco", "csv")
+install_github("geomdoner", "tlevine")
 ```
 
 Windows users also must first install
@@ -11,7 +11,7 @@ Windows users also must first install
 # Example
 
 ```{r dsamp}
-library(geomtaco)
+library(geomdoner)
 ggplot(mpg) +
   aes(label = paste(manufacturer, model), fill = trans, cilantro = TRUE, x = hwy, y = cty) +
   geom_text() + geom_taco()
