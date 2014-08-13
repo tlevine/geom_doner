@@ -30,5 +30,6 @@ ggplot(mpg[sample.int(nrow(mpg), 8),]) +
       x = hwy, y = cty) +
   xlab('Highway miles per gallon') +
   ylab('City miles per gallon') +
+  ggtitle('Milage of eight automobile makes') +
   geom_text() + geom_döner()
 ```
