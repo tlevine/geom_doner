@@ -2,7 +2,7 @@
 
 ```r
 library("devtools")
-install_github("geomdoner", "tlevine")
+install_github("geomdöner", "tlevine")
 ```
 
 Windows users also must first install
@@ -37,61 +37,68 @@ ggplot(mpg[sample.int(nrow(mpg), 8),]) +
 
 ![plot of chunk mpg](figure/mpg.png) 
 
-```
-## 
-## Make #142 (nissan altima): durumohne knoblauch
-## * ohne krauter
-## * ohne scharf
-## * ohne zwiebeln
-## * mit tomaten
-## * mit salat
-##  
-## Make #13 (audi a4 quattro): donerohne knoblauch
-## * ohne krauter
-## * ohne scharf
-## * ohne zwiebeln
-## * mit tomaten
-## * mit salat
-##  
-## Make #107 (honda civic): durumohne knoblauch
-## * ohne krauter
-## * mit scharf
-## * mit zwiebeln
-## * mit tomaten
-## * mit salat
-##  
-## Make #86 (ford f150 pickup 4wd): donermit knoblauch
-## * ohne krauter
-## * ohne scharf
-## * ohne zwiebeln
-## * mit tomaten
-## * mit salat
-##  
-## Make #42 (dodge caravan 2wd): durumohne knoblauch
-## * ohne krauter
-## * mit scharf
-## * mit zwiebeln
-## * mit tomaten
-## * mit salat
-##  
-## Make #98 (ford mustang): pideohne knoblauch
-## * ohne krauter
-## * mit scharf
-## * mit zwiebeln
-## * mit tomaten
-## * mit salat
-##  
-## Make #175 (toyota 4runner 4wd): donermit knoblauch
-## * ohne krauter
-## * mit scharf
-## * ohne zwiebeln
-## * mit tomaten
-## * mit salat
-##  
-## Make #118 (hyundai tiburon): durumohne knoblauch
-## * ohne krauter
-## * ohne scharf
-## * mit zwiebeln
-## * mit tomaten
-## * mit salat
-```
+> Make #142 (nissan altima): döner box
+> * ohne knoblauch
+> * ohne kräuter
+> * ohne scharf
+> * ohne zwiebeln
+> * mit tomaten
+> * mit salat
+>  
+> Make #13 (audi a4 quattro): döner
+> * ohne knoblauch
+> * ohne kräuter
+> * ohne scharf
+> * ohne zwiebeln
+> * mit tomaten
+> * mit salat
+>  
+> Make #107 (honda civic): döner box
+> * ohne knoblauch
+> * ohne kräuter
+> * mit scharf
+> * mit zwiebeln
+> * mit tomaten
+> * mit salat
+>  
+> Make #86 (ford f150 pickup 4wd): döner
+> * mit knoblauch
+> * ohne kräuter
+> * ohne scharf
+> * ohne zwiebeln
+> * mit tomaten
+> * mit salat
+>  
+> Make #42 (dodge caravan 2wd): döner box
+> * ohne knoblauch
+> * ohne kräuter
+> * mit scharf
+> * mit zwiebeln
+> * mit tomaten
+> * mit salat
+>  
+> Make #98 (ford mustang): döner
+> * ohne knoblauch
+> * ohne kräuter
+> * mit scharf
+> * mit zwiebeln
+> * mit tomaten
+> * mit salat
+>  
+> Make #175 (toyota 4runner 4wd): döner
+> * mit knoblauch
+> * ohne kräuter
+> * mit scharf
+> * ohne zwiebeln
+> * mit tomaten
+> * mit salat
+>  
+> Make #118 (hyundai tiburon): döner box
+> * ohne knoblauch
+> * ohne kräuter
+> * ohne scharf
+> * mit zwiebeln
+> * mit tomaten
+> * mit salat
+
+![A döner plot](figure/geom_doner.jpg)
