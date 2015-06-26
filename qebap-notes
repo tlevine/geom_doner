@@ -1,0 +1,10 @@
+ggplot(df) +
+  aes(label = paste0('Make #', id, ' (', manufacturer, ' ', model, ')'),
+      
+      border = drv,
+      knoblauch = truck,
+      scharf = grepl('auto', trans),
+      zwiebeln = y2008,
+      tomaten = TRUE, salat = TRUE,
+      x = hwy, y = cty) +
+  geom_qebap()
