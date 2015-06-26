@@ -1,6 +1,13 @@
 ggplot(df) +
   aes(label = paste0('Make #', id, ' (', manufacturer, ' ', model, ')'),
-      
+
+
+      kajmak = c(TRUE, FALSE),
+      shape = c('cylindar', 'ball'),
+      spicy = c(TRUE, FALSE),      
+      count = 1:10, # How many pieces?
+
+
       border = drv,
       knoblauch = truck,
       scharf = grepl('auto', trans),
